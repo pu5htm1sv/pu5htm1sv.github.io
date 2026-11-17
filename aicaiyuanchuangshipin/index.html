@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>艾彩原创视频-独立影像创作者作品索引与深度观察</title>
+<meta name="description" content="艾彩原创视频是聚焦独立影像创作的作品索引站，收录剧情短片、纪录片段、实验动画与幕后手记，提供作品分析、创作指南、观众评论与按题材检索的频道目录。">
+<meta name="keywords" content="艾彩原创视频">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2a3a'/%3E%3Cpath d='M18 44V20l14 8 14-8v24' fill='none' stroke='%23f2a03d' stroke-width='5' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='45' r='4' fill='%23f2a03d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d2a3a;
+  --ink-2:#33455c;
+  --muted:#61707f;
+  --paper:#f6f3ec;
+  --card:#fffdf8;
+  --line:#dcd5c6;
+  --line-2:#e9e3d6;
+  --brand:#c4452c;
+  --brand-2:#8f2f1d;
+  --accent:#f2a03d;
+  --teal:#2c6e6a;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(29,42,58,.08);
+  --shadow-hover:0 6px 18px rgba(29,42,58,.14);
+  --sp-1:8px; --sp-2:14px; --sp-3:22px; --sp-4:34px; --sp-5:52px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --offset:118px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--offset)}
+body{
+  margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 var(--sp-2)}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶公告条 + 页头 ---------- */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--ink);color:#f4ecdd;font-size:13.5px;
+  display:flex;gap:var(--sp-2);align-items:center;justify-content:center;
+  padding:7px var(--sp-2);text-align:center;flex-wrap:wrap;
+}
+.announce b{color:var(--accent);font-weight:700}
+.announce a{color:#ffd9a8;text-decoration:underline}
+.site-head{
+  background:rgba(246,243,236,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  max-width:1180px;margin:0 auto;padding:10px var(--sp-3);
+  display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--ink)}
+.brand-name span{color:var(--brand)}
+.main-nav{display:flex;gap:2px;flex-wrap:wrap;flex:1 1 auto}
+.main-nav a{
+  font-size:14.5px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-sm);
+  text-decoration:none;white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a[aria-current="true"]{background:#ece5d7;color:var(--brand-2);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:var(--sp-1);flex:0 0 auto}
+.search-form{display:flex;align-items:center;border:1px solid var(--line);background:#fffdf8;border-radius:20px;overflow:hidden}
+.search-form input{
+  border:0;background:transparent;padding:7px 10px;font-size:14px;width:150px;
+  font-family:inherit;color:var(--ink);
+}
+.search-form input:focus{outline:none}
+.search-form button{
+  border:0;background:var(--brand);color:#fff;padding:8px 13px;font-size:13.5px;border-radius:0 20px 20px 0;
+}
+.search-form button:hover{background:var(--brand-2)}
+.menu-toggle{display:none;border:1px solid var(--line);background:#fffdf8;border-radius:var(--radius-sm);padding:8px 12px;font-size:14px;color:var(--ink)}
+.search-msg{max-width:1180px;margin:0 auto;padding:0 var(--sp-3);font-size:13px;color:var(--brand-2);display:none}
+.search-msg.show{display:block;padding-bottom:6px}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1d2a3a 0%,#2b3c50 55%,#3a2c28 100%);
+  color:#f3ecdf;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--sp-5) var(--sp-3) calc(var(--sp-5) + 18px);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--sp-4);align-items:center;
+  position:relative;z-index:2;
+}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:1px;
+  color:var(--accent);border:1px solid rgba(242,160,61,.45);border-radius:20px;padding:3px 12px;margin-bottom:var(--sp-2);
+}
+.hero h1{font-size:clamp(30px,4.6vw,50px);letter-spacing:1px;margin-bottom:var(--sp-2)}
+.hero p.lead{color:#d8d0c2;font-size:16.5px;max-width:34em;margin-bottom:var(--sp-3)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:24px;font-size:15px;font-weight:600;
+  text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn-primary{background:var(--accent);color:#2a1c07}
+.btn-primary:hover{background:#ffb65a;text-decoration:none;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(243,236,223,.5);color:#f3ecdf}
+.btn-ghost:hover{background:rgba(243,236,223,.12);text-decoration:none;transform:translateY(-2px)}
+.hero-stats{display:flex;gap:var(--sp-4);margin-top:var(--sp-4);flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:26px;color:var(--accent);line-height:1.2}
+.hero-stats div span{font-size:13px;color:#bdb5a6}
+.hero-visual{position:relative;height:320px}
+.hero-visual svg{width:100%;height:100%}
+.hero-deco{
+  position:absolute;inset:0;z-index:1;opacity:.5;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(242,160,61,.22),transparent 42%),
+    radial-gradient(circle at 8% 82%,rgba(196,69,44,.25),transparent 46%);
+}
+
+/* ---------- 布局 ---------- */
+.layout{
+  max-width:1180px;margin:0 auto;padding:var(--sp-4) var(--sp-3) var(--sp-5);
+  display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:var(--sp-4);align-items:start;
+}
+article.main-col{min-width:0}
+.side-col{min-width:0;display:flex;flex-direction:column;gap:var(--sp-3);position:sticky;top:var(--offset)}
+section{scroll-margin-top:var(--offset);margin-bottom:var(--sp-5)}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:var(--sp-3);border-bottom:2px solid var(--ink);padding-bottom:8px}
+.sec-head h2{font-size:22px}
+.sec-head .sec-note{font-size:13px;color:var(--muted);margin-left:auto}
+.sec-kicker{font-size:12.5px;color:var(--brand);letter-spacing:1px;font-weight:700}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-2)}
+.ov-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:var(--sp-3);
+  box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease;
+}
+.ov-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.ov-card h3{font-size:16px;margin-bottom:6px;color:var(--brand-2)}
+.ov-card p{font-size:14px;color:var(--muted);margin:0}
+.ov-card .num{font-size:12px;color:var(--teal);font-weight:700;letter-spacing:1px}
+
+/* 精选卡片 */
+.feat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3)}
+.feat-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.feat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.feat-card img{width:100%;height:170px;object-fit:cover}
+.feat-body{padding:var(--sp-2) var(--sp-3) var(--sp-3);display:flex;flex-direction:column;flex:1}
+.feat-body h3{font-size:16.5px;margin-bottom:6px}
+.feat-body p{font-size:14px;color:var(--muted);flex:1;margin-bottom:10px}
+.meta{display:flex;gap:10px;font-size:12.5px;color:var(--teal);flex-wrap:wrap}
+.tag{display:inline-block;font-size:12px;background:#efe8da;color:var(--ink-2);border-radius:20px;padding:2px 10px;margin:0 4px 4px 0}
+.tag:hover{background:#e3d9c6;text-decoration:none}
+
+/* 最新更新紧凑列表 */
+.upd-list{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden}
+.upd-list li{display:grid;grid-template-columns:74px minmax(0,1fr);gap:var(--sp-2);padding:12px var(--sp-3);border-bottom:1px solid var(--line-2)}
+.upd-list li:last-child{border-bottom:0}
+.upd-list time{font-size:13px;color:var(--brand);font-variant-numeric:tabular-nums;padding-top:2px}
+.upd-list .upd-title{font-weight:600;font-size:15px}
+.upd-list .upd-desc{font-size:13.5px;color:var(--muted);margin:2px 0 0}
+.upd-list .upd-kind{font-size:12px;color:var(--teal)}
+
+/* 分类入口 标签索引 */
+.channel-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-2)}
+.ch-item{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius-sm);
+  padding:12px 14px;display:flex;justify-content:space-between;gap:8px;align-items:baseline;
+  color:var(--ink);text-decoration:none;transition:border-color .15s ease,transform .15s ease;
+}
+.ch-item:hover{border-color:var(--brand);transform:translateY(-2px);text-decoration:none}
+.ch-item b{font-size:14.5px}
+.ch-item span{font-size:12px;color:var(--muted);white-space:nowrap}
+
+/* 深度解析 */
+.deep{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:var(--sp-4);
+  box-shadow:var(--shadow);
+}
+.deep h3{font-size:18px;margin:var(--sp-3) 0 8px;color:var(--brand-2)}
+.deep h3:first-of-type{margin-top:0}
+.deep p{font-size:15px}
+.deep blockquote{
+  margin:var(--sp-2) 0;padding:12px 16px;border-left:4px solid var(--accent);
+  background:#faf5ea;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:14.5px;color:var(--ink-2);
+}
+.compare{width:100%;border-collapse:collapse;font-size:14px;margin:var(--sp-2) 0}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:#efe8da;font-size:13px;color:var(--ink-2)}
+.compare caption{caption-side:top;text-align:left;font-size:13px;color:var(--muted);padding-bottom:6px}
+
+/* 体验指南 步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.steps li{
+  position:relative;padding:0 0 var(--sp-3) 46px;border-left:2px dashed var(--line);margin-left:16px;
+}
+.steps li:last-child{border-left:2px dashed transparent;padding-bottom:0}
+.steps li::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:-17px;top:0;width:32px;height:32px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps h3{font-size:15.5px;margin-bottom:4px}
+.steps p{font-size:14px;color:var(--muted);margin:0}
+
+/* 创作者证言 引语卡 */
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-2)}
+.quote{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:var(--sp-3);
+  position:relative;
+}
+.quote::before{content:"“";position:absolute;top:2px;left:12px;font-size:42px;color:var(--line);line-height:1}
+.quote p{font-size:14.5px;color:var(--ink-2);margin:10px 0 8px}
+.quote .who{font-size:12.5px;color:var(--teal)}
+
+/* FAQ */
+.faq details{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius-sm);
+  margin-bottom:10px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-weight:600;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--brand);font-weight:400;flex:0 0 auto}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{border-bottom:1px solid var(--line-2)}
+.faq .ans{padding:12px 16px;font-size:14.5px;color:var(--ink-2)}
+
+/* 评论 */
+.cmt-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--sp-2)}
+.cmt{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:var(--sp-2) var(--sp-3);
+  display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;
+}
+.avatar{
+  width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--paper);
+  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;
+}
+.cmt .cmt-head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.cmt .cmt-head b{color:var(--ink);font-size:14px}
+.cmt p{font-size:14.5px;margin:4px 0 0}
+.cmt .ref{font-size:12.5px;color:var(--brand-2)}
+
+/* 相关资讯 */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{
+  display:grid;grid-template-columns:92px minmax(0,1fr);gap:var(--sp-2);
+  padding:11px 0;border-bottom:1px solid var(--line);
+}
+.news-list li:last-child{border-bottom:0}
+.news-list time{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.news-list .n-title{font-size:15px;font-weight:600}
+.news-list .n-desc{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 var(--sp-3) 30px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;
+  background:var(--card);border:3px solid var(--accent);
+}
+.timeline time{font-size:12.5px;color:var(--brand);font-weight:700}
+.timeline b{display:block;font-size:15px;margin:2px 0}
+.timeline p{font-size:13.5px;color:var(--muted);margin:0}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;
+  padding:7px 15px;font-size:14px;color:var(--ink-2);text-decoration:none;
+  transition:border-color .15s ease,color .15s ease;
+}
+.rec-tags a:hover{border-color:var(--brand);color:var(--brand-2);text-decoration:none}
+
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);
+  padding:var(--sp-3);box-shadow:var(--shadow);
+}
+.side-card h2{font-size:16px;margin-bottom:var(--sp-2);padding-bottom:8px;border-bottom:1px solid var(--line-2)}
+.side-nav{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.side-nav a{
+  display:block;font-size:14px;color:var(--ink-2);padding:6px 9px;border-radius:6px;text-decoration:none;
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f1ebdd;text-decoration:none}
+.side-nav a.active{border-left-color:var(--brand);background:#f1ebdd;color:var(--brand-2);font-weight:600}
+.bill-list{list-style:none;padding:0;margin:0;counter-reset:bill}
+.bill-list li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;padding:8px 0;border-bottom:1px solid var(--line-2);font-size:14px}
+.bill-list li:last-child{border-bottom:0}
+.bill-list li::before{
+  counter-increment:bill;content:counter(bill);
+  font-weight:800;color:var(--accent);font-size:15px;line-height:1.4;
+}
+.bill-list .b-sub{display:block;font-size:12px;color:var(--muted)}
+.side-fact{font-size:13.5px;color:var(--muted)}
+.side-fact b{color:var(--ink)}
+
+/* 页尾 */
+.site-foot{background:var(--ink);color:#c9c1b2;font-size:14px}
+.foot-inner{max-width:1180px;margin:0 auto;padding:var(--sp-4) var(--sp-3) var(--sp-3);display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:var(--sp-4)}
+.foot-brand .brand-name{color:#f4ecdd}
+.foot-brand p{font-size:13.5px;color:#a8a091;margin-top:10px;max-width:26em}
+.foot-col h3{font-size:14px;color:var(--accent);margin-bottom:10px;letter-spacing:.5px}
+.foot-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.foot-col a{color:#c9c1b2;font-size:13.5px;text-decoration:none}
+.foot-col a:hover{color:#fff;text-decoration:underline}
+.foot-bottom{
+  border-top:1px solid #33455c;margin-top:var(--sp-3);
+}
+.foot-bottom-inner{
+  max-width:1180px;margin:0 auto;padding:14px var(--sp-3);font-size:12.5px;color:#8b8476;
+  display:flex;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap;
+}
+.top-btn{
+  position:fixed;right:18px;bottom:22px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:0;background:var(--brand);color:#fff;
+  font-size:18px;box-shadow:var(--shadow-hover);display:none;align-items:center;justify-content:center;
+}
+.top-btn.show{display:flex}
+.top-btn:hover{background:var(--brand-2)}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr;gap:var(--sp-4)}
+  .side-col{position:static;order:2}
+  .hero-inner{grid-template-columns:1fr;padding-top:var(--sp-4)}
+  .hero-visual{height:230px;order:2}
+  .overview-grid,.channel-index{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  :root{--offset:150px}
+  .head-inner{padding:8px 14px;gap:8px}
+  .main-nav{
+    order:3;flex-basis:100%;display:none;flex-direction:column;gap:2px;
+    border-top:1px solid var(--line);padding-top:8px;margin-top:2px;
+  }
+  .main-nav.open{display:flex}
+  .menu-toggle{display:inline-block}
+  .head-tools{order:2;margin-left:auto}
+  .search-form input{width:104px;font-size:13px}
+  .overview-grid,.feat-grid,.quotes,.channel-index{grid-template-columns:1fr}
+  .sec-head h2{font-size:19px}
+  .deep{padding:var(--sp-3)}
+  .upd-list li{grid-template-columns:1fr;gap:2px}
+  .news-list li{grid-template-columns:1fr;gap:2px}
+  .foot-inner{grid-template-columns:1fr;gap:var(--sp-3)}
+  .hero-stats{gap:var(--sp-3)}
+  .top-btn{width:40px;height:40px;right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .ov-card:hover,.feat-card:hover,.ch-item:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce" role="note">
+    <span><b>艾彩原创视频</b> 11 月 7 日更新《雾港夜班》完整版与导演音轨，新增 4 条创作者手记</span>
+    <a href="/#latest">查看更新</a>
+  </div>
+  <header class="site-head">
+    <div class="head-inner">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#1d2a3a"/>
+          <path d="M18 44V20l14 8 14-8v24" fill="none" stroke="#f2a03d" stroke-width="5" stroke-linejoin="round"/>
+          <circle cx="32" cy="45" r="4" fill="#f2a03d"/>
+        </svg>
+        <span class="brand-name">艾彩<span>原创视频</span></span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">导航菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选作品</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">题材频道</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看与投稿指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search-form" id="searchForm" role="search" aria-label="站内查找">
+          <input type="search" id="searchInput" placeholder="查找作品或频道" aria-label="输入作品或频道关键词">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <p class="search-msg" id="searchMsg" role="status" aria-live="polite"></p>
+  </header>
+</div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="hero-deco" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">独立影像 · 作品索引</span>
+      <h1 id="heroTitle">艾彩原创视频</h1>
+      <p class="lead">一个按题材与拍摄手法归档的独立影像作品索引。收录剧情短片、纪录片段、实验动画与幕后手记，每条作品都标注片长、拍摄设备、发布平台与创作者的原始说明，方便按"想看什么"而不是"谁最火"来检索。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">浏览精选作品</a>
+        <a class="btn btn-ghost" href="/#guide">看懂投稿与分级</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>386</strong><span>已归档作品</span></div>
+        <div><strong>12</strong><span>题材频道</span></div>
+        <div><strong>47</strong><span>创作者手记</span></div>
+        <div><strong>11.07</strong><span>最近一次索引更新</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 380 320" role="img" aria-label="胶片与播放界面组合的原创图形">
+        <defs>
+          <linearGradient id="filmGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f2a03d"/>
+            <stop offset="1" stop-color="#c4452c"/>
+          </linearGradient>
+        </defs>
+        <rect x="30" y="46" width="300" height="200" rx="12" fill="#0f1722" stroke="#44546b" stroke-width="2"/>
+        <rect x="30" y="46" width="300" height="28" rx="12" fill="#243244"/>
+        <circle cx="50" cy="60" r="5" fill="#c4452c"/>
+        <circle cx="68" cy="60" r="5" fill="#f2a03d"/>
+        <circle cx="86" cy="60" r="5" fill="#2c6e6a"/>
+        <polygon points="162,110 162,196 236,153" fill="url(#filmGrad)"/>
+        <g fill="#44546b">
+          <rect x="48" y="176" width="70" height="8" rx="4"/>
+          <rect x="48" y="194" width="52" height="8" rx="4"/>
+          <rect x="48" y="212" width="60" height="8" rx="4"/>
+        </g>
+        <g stroke="#f2a03d" stroke-width="2" fill="#1d2a3a">
+          <rect x="56" y="268" width="38" height="26" rx="4"/>
+          <rect x="104" y="268" width="38" height="26" rx="4"/>
+          <rect x="152" y="268" width="38" height="26" rx="4"/>
+          <rect x="200" y="268" width="38" height="26" rx="4"/>
+          <rect x="248" y="268" width="38" height="26" rx="4"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+  <article class="main-col">
+
+    <section id="overview" aria-labelledby="ovTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">01 / 领域概览</span>
+        <h2 id="ovTitle">独立影像都在拍什么</h2>
+        <span class="sec-note">按现行归档口径统计</span>
+      </div>
+      <p>这里说的独立影像，指由个人或三人以内小团队完成、以短视频平台与独立影展为主要发布渠道的原创作品。时长集中在 3 分 40 秒到 22 分钟，成本从一部手机到两万元级设备不等。386 条归档作品中，剧情短片 152 条、纪录片段 96 条、实验动画 61 条、幕后与教程 77 条。</p>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <span class="num">剧情短片</span>
+          <h3>一句话冲突撑起 8 分钟</h3>
+          <p>152 条里，124 条把冲突压缩在单一场景，常见的是出租屋、便利店、末班公交。导演常在片尾保留一次反转。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">纪录片段</span>
+          <h3>固定机位看一个人的班次</h3>
+          <p>96 条纪录里，手艺人、夜班工人、乡村教师是出现最多的三类对象。多数用同期声，不配旁白。</p>
+        </div>
+        <div class="ov-card">
+          <span class="num">实验动画</span>
+          <h3>逐帧手绘与三维混合</h3>
+          <p>61 条中 38 条为逐帧手绘，单条平均工时 11 天。近年出现用三维软件做定格质感的混合路线。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" aria-labelledby="featTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">02 / 精选内容推荐</span>
+        <h2 id="featTitle">本周值得按顺序看的四部</h2>
+      </div>
+      <div class="feat-grid">
+        <article class="feat-card">
+          <img src="https://picsum.photos/seed/acai-foggy-harbor/640/360" width="640" height="360" loading="lazy" alt="雾港夜班片段中的码头路灯与集装箱">
+          <div class="feat-body">
+            <h3><a href="/#latest">雾港夜班</a></h3>
+            <p>凌晨两点的码头值班室，保安和一位走错路的船员聊完一整包烟。全片 14 分 22 秒，两机位，用一次长镜完成主要对话。</p>
+            <div class="meta"><span>剧情短片</span><span>14:22</span><span>11 月 7 日更新</span></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <img src="https://picsum.photos/seed/acai-loom-room/640/360" width="640" height="360" loading="lazy" alt="织机房里老人手部推梭的特写">
+          <div class="feat-body">
+            <h3><a href="/#deep">一台织机的第六十年</a></h3>
+            <p>记录浙江一座家庭织布作坊老年机修工的一天，保留织机噪声与环境声，没有解说词，只在片头标了一次日期。</p>
+            <div class="meta"><span>纪录片段</span><span>19:05</span><span>11 月 3 日上线</span></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <img src="https://picsum.photos/seed/acai-paper-city/640/360" width="640" height="360" loading="lazy" alt="剪纸城市逐帧动画的一帧，楼房是从旧报纸剪出来的">
+          <div class="feat-body">
+            <h3><a href="/#channels">纸城漫游</a></h3>
+            <p>用旧报纸剪出城市轮廓，逐帧拍摄 3840 张。单条工时约 26 天，作者在创作手记里列出了每秒 12 帧的具体取舍理由。</p>
+            <div class="meta"><span>实验动画</span><span>6:40</span><span>10 月 29 日上线</span></div>
+          </div>
+        </article>
+        <article class="feat-card">
+          <img src="https://picsum.photos/seed/acai-night-bus/640/360" width="640" height="360" loading="lazy" alt="末班公交内景，空座椅与车窗外掠过的路灯光斑">
+          <div class="feat-body">
+            <h3><a href="/#guide">末班车后座</a></h3>
+            <p>两名高中生在一趟末班公交上决定要不要放弃艺考。片长 9 分 08 秒，手机竖拍后转横画幅，保留了一处明显的对焦失误。</p>
+            <div class="meta"><span>剧情短片</span><span>09:08</span><span>11 月 5 日上线</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="latest" aria-labelledby="latestTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">03 / 最新更新</span>
+        <h2 id="latestTitle">近三天入库与修订</h2>
+        <span class="sec-note">按入库时间倒序</span>
+      </div>
+      <ul class="upd-list">
+        <li>
+          <time datetime="2026-11-07">11-07</time>
+          <div>
+            <p class="upd-title">雾港夜班 · 完整版与导演音轨</p>
+            <p class="upd-desc">补入 2 分 10 秒此前删去的码头空镜，同时挂上导演解说音轨；<span class="upd-kind">修订条目</span></p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11-06</time>
+          <div>
+            <p class="upd-title">旧胶片上的县剧团</p>
+            <p class="upd-desc">纪录片段新入库，摄于 2024 年冬，使用 16mm 转数字，片长 17:31；<span class="upd-kind">新作品</span></p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11-06</time>
+          <div>
+            <p class="upd-title">三种录音方案的现场对比</p>
+            <p class="upd-desc">幕后教程更新，列出机头麦、领夹麦、指向麦在三种室内环境下的底噪实测；<span class="upd-kind">教程</span></p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11-05</time>
+          <div>
+            <p class="upd-title">末班车后座</p>
+            <p class="upd-desc">剧情短片入库，创作者同时公开 9 页分镜稿，标注了两处临场改动；<span class="upd-kind">新作品</span></p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11-05</time>
+          <div>
+            <p class="upd-title">创作者手记合集 · 第四辑</p>
+            <p class="upd-desc">收录 6 篇手记，主题为小成本下的灯光与场地协调；<span class="upd-kind">专栏</span></p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-04">11-04</time>
+          <div>
+            <p class="upd-title">纸城漫游 · 帧率说明修订</p>
+            <p class="upd-desc">原作者更正原说明中的帧率笔误，由 8 帧改为 12 帧，条目已同步；<span class="upd-kind">修订条目</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="channels" aria-labelledby="chTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">04 / 题材频道</span>
+        <h2 id="chTitle">按题材与手法检索的十二个频道</h2>
+      </div>
+      <div class="channel-index">
+        <a class="ch-item" href="/#featured"><b>城市夜班题材短片</b><span>34 条</span></a>
+        <a class="ch-item" href="/#featured"><b>手艺人纪录片段</b><span>28 条</span></a>
+        <a class="ch-item" href="/#featured"><b>纸片逐帧动画</b><span>19 条</span></a>
+        <a class="ch-item" href="/#featured"><b>手机竖拍转横画幅</b><span>41 条</span></a>
+        <a class="ch-item" href="/#featured"><b>一镜到底实验</b><span>16 条</span></a>
+        <a class="ch-item" href="/#featured"><b>乡村教师纪录</b><span>12 条</span></a>
+        <a class="ch-item" href="/#featured"><b>校园题材剧情短片</b><span>37 条</span></a>
+        <a class="ch-item" href="/#featured"><b>定格与三维混合</b><span>9 条</span></a>
+        <a class="ch-item" href="/#featured"><b>地方戏曲影像</b><span>14 条</span></a>
+        <a class="ch-item" href="/#featured"><b>低成本灯光方案</b><span>22 条</span></a>
+        <a class="ch-item" href="/#featured"><b>隔窗拍摄</b><span>11 条</span></a>
+        <a class="ch-item" href="/#featured"><b>片尾反转清单</b><span>26 条</span></a>
+      </div>
+    </section>
+
+    <section id="deep" aria-labelledby="deepTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">05 / 深度解析</span>
+        <h2 id="deepTitle">三分钟以内的短片，正在被算法重写成什么样</h2>
+      </div>
+      <div class="deep">
+        <blockquote>归档数据里能核对的一件事：2026 年 3 月至 10 月，片长 3 分钟以内的新入库短片从 18 条增至 47 条，同期平均镜头数从 41 个涨到 63 个。这不是观众变耐心了，是发布端的要求变了。</blockquote>
+
+        <h3>判断一：前 8 秒必须完成一次冲突，否则完播率掉得比画质更狠</h3>
+        <p>把 2026 年 3 月和 10 月的入库数据并排看，片长缩短与镜头数增加同时发生。对比两条具体作品：《末班车后座》时长 9 分 08 秒，前 8 秒是车内空镜加一句台词；《雨棚下的两个箱子》时长 2 分 40 秒，前 8 秒已经完成一次推搡和一个掉落的箱子。后者在抖音的完播率是 61%，前者 38%。创作者在接受访谈时表示，平台侧没有明文规定前 8 秒必须有事发生，但后台数据会让剪辑自己调整。</p>
+
+        <h3>判断二：特写密度上升，环境交代被牺牲，代价在二刷时显现</h3>
+        <p>抽样 30 条 3 分钟以内作品，平均每 4.2 秒切一次镜，特写与近景占比 68%。《雾港夜班》保留了大量中景与空镜，17 分 31 秒的《旧胶片上的县剧团》更是用了 9 个超过 20 秒的固定镜头。两种做法各有代价：前者第一遍抓人，二刷时观众留言说"记不住码头长什么样"；后者首刷流失高，但二刷完整观看比例明显更高。</p>
+
+        <table class="compare">
+          <caption>两条作品的镜头结构对照（数据来自站内人工统计，2026-11-06 核对）</caption>
+          <thead>
+            <tr><th>指标</th><th>雨棚下的两个箱子</th><th>旧胶片上的县剧团</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>片长</td><td>2:40</td><td>17:31</td></tr>
+            <tr><td>镜头数</td><td>58</td><td>24</td></tr>
+            <tr><td>平均镜头长度</td><td>2.8 秒</td><td>43.8 秒</td></tr>
+            <tr><td>超过 20 秒的固定镜头</td><td>0</td><td>9</td></tr>
+            <tr><td>完播率（抖音）</td><td>61%</td><td>23%</td></tr>
+            <tr><td>二刷完整观看比例</td><td>12%</td><td>29%</td></tr>
+          </tbody>
+        </table>
+
+        <h3>判断三：创作者开始为剪辑点写注释，这比加旁白有用</h3>
+        <p>10 月 29 日《纸城漫游》上线时，作者同步公开了逐帧表，列出每秒 12 帧的具体取舍：为什么第三秒不剪，为什么第 6 分 12 秒要留两帧黑场。同期有 6 位创作者在发布说明里附上类似注释，此前只有 1 位。可以反驳的一点是，注释本身不改变作品的观看体验，它改变的是作品被转发时附带的解释权——转发者不必再自己猜。</p>
+
+        <h3>判断四：竖拍转横画幅不是妥协，是新的构图训练</h3>
+        <p>41 条竖拍转横画幅作品里，有 28 条在画面上下留出空白做字幕或环境。手机竖持拍摄时，人物占画面中段，转横后左右自然形成留白。这个做法最初是为了一次拍完两个平台，现在反过来影响分镜：有创作者直接按竖构图讲故事，再在剪辑时决定裁切位置。需要区分的是，这种做法不等于"竖屏电影"，画面信息密度的下降是真实存在的，只是在 3 分钟以内的篇幅里，损失可以被节奏掩盖。</p>
+      </div>
+    </section>
+
+    <section id="guide" aria-labelledby="guideTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">06 / 体验指南</span>
+        <h2 id="guideTitle">从一条作品到一次完整观看</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>先看片长与题材，不要先看播放量</h3>
+          <p>386 条作品里，播放量前三名有两条是教程而非作品。播放量反映的是推荐位的运气，片长和题材才决定你接下来二十分钟要不要留。</p>
+        </li>
+        <li>
+          <h3>读一遍创作者手记，再决定看正片</h3>
+          <p>47 篇手记里有 31 篇写了具体改动，比如《末班车后座》标出第 4 分 20 秒那处对焦失误是刻意保留的。手记比简介更能说明创作者想要什么。</p>
+        </li>
+        <li>
+          <h3>留意修订标记，同一作品可能有多个版本</h3>
+          <p>11 月 7 日《雾港夜班》补入 2 分 10 秒空镜，旧版没有这段。条目页会列出每个版本的入库日期和时长差。</p>
+        </li>
+        <li>
+          <h3>用频道而不是搜索来横着看</h3>
+          <p>"城市夜班题材短片"下有 34 条，纵向看完一轮，比零散点开十条更能看出同类作品的处理差异。</p>
+        </li>
+        <li>
+          <h3>想投稿就先对一遍记录规范</h3>
+          <p>需要提供片长、拍摄设备、拍摄年月、是否使用外采素材四项。缺项会被标为待补，不影响入库，但在筛选时会排在完整条目之后。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="voiceTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">07 / 创作者证言</span>
+        <h2 id="voiceTitle">拍的人怎么说自己的片子</h2>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <p>码头那场戏本来只打算拍三分钟，结果保安讲了他值夜班遇到的两次走错路的人，我们把烟抽完了才开机。现在剪进去的那段闲聊，是他自己说的。</p>
+          <span class="who">— 《雾港夜班》导演，11 月 7 日手记</span>
+        </div>
+        <div class="quote">
+          <p>每秒 12 帧是我试出来的，8 帧太抖，16 帧剪纸的边缘会糊。这个数字没有理论依据，纯粹是这版纸片厚度刚好。</p>
+          <span class="who">— 《纸城漫游》作者，10 月 29 日发布说明</span>
+        </div>
+        <div class="quote">
+          <p>我不觉得用手机拍是低成本，是另一种成本：你要花更多时间等光。织机房的窗只在那两个小时给到合适的光，等不到就第二天再来。</p>
+          <span class="who">— 《一台织机的第六十年》摄影，11 月 3 日访谈</span>
+        </div>
+        <div class="quote">
+          <p>那处对焦失误本来想补拍，后来发现补拍的对焦太准，反而没那个意思。同学看完说像真的在车上。</p>
+          <span class="who">— 《末班车后座》导演，11 月 5 日评论回复</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faqTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">08 / 常见问题</span>
+        <h2 id="faqTitle">关于作品、版本与投稿</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>原创视频的"原创"在这里具体指什么？</summary>
+          <div class="ans">指影像素材由创作者本人拍摄或绘制，剪辑、配乐、字幕自行完成；使用他人素材须在条目里注明来源与授权方式。归档里有 23 条使用了外采环境音，均在说明中列出录音地点和采集日期。</div>
+        </details>
+        <details>
+          <summary>同一条短片为什么会出现两个时长？</summary>
+          <div class="ans">版本差异。发布方常在平台版与影展版之间保留不同长度。《雾港夜班》平台版 12 分 12 秒，影展版 14 分 22 秒，差在码头空镜和一段无对白的等待镜头。条目页按入库日期分列，不合并统计。</div>
+        </details>
+        <details>
+          <summary>片长三分钟以内的作品，是不是都为了迎合推荐？</summary>
+          <div class="ans">部分是的，数据上能看到前 8 秒冲突密度和完播率相关。但 47 条三分钟以内作品里，有 14 条明确写在影展或活动征集的要求里，与平台算法无关。把两类分开看，才不至于把创作动机简化成一个原因。</div>
+        </details>
+        <details>
+          <summary>逐帧动画的工时是怎么算出来的？</summary>
+          <div class="ans">按作者提供的拍摄日志逐日累加，只计拍摄与后期，不计前期构思。《纸城漫游》日志显示 26 天、每天约 4 小时，合计 104 小时，成片 6 分 40 秒、每秒 12 帧，共 4800 帧左右，其中约 960 帧废稿。</div>
+        </details>
+        <details>
+          <summary>条目里的播放量数据多久更新一次？</summary>
+          <div class="ans">由提交者手动填写，标注填写日期，站内不做自动抓取。因此不同条目的播放量可能不是同一天的数值，比较时请先看日期。截止 11 月 7 日，最近一次集中更新覆盖 62 条。</div>
+        </details>
+        <details>
+          <summary>投稿被标为"待补"会影响展示吗？</summary>
+          <div class="ans">不影响入库和检索，但在按"记录完整"排序时会排在后面。缺项通常集中在拍摄设备和素材授权两项。补齐后可申请修订，修订记录会在条目下方留痕。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="comments" aria-labelledby="cmtTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">09 / 观众评论</span>
+        <h2 id="cmtTitle">看完之后的留言</h2>
+      </div>
+      <ul class="cmt-list">
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">周</div>
+          <div>
+            <div class="cmt-head"><b>周叙</b><time datetime="2026-11-07">11 月 7 日</time><span class="ref">评论《雾港夜班》</span></div>
+            <p>补上的那段空镜是对的。原来版本码头像布景，现在能听见远处吊机的钢索声，保安讲话的停顿才有落点。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">林</div>
+          <div>
+            <div class="cmt-head"><b>林间十七</b><time datetime="2026-11-06">11 月 6 日</time><span class="ref">评论《纸城漫游》</span></div>
+            <p>帧率说明改过一次，我按 8 帧重算的工时全错了。作者肯更正挺好，但一开始写准会省很多事。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">陈</div>
+          <div>
+            <div class="cmt-head"><b>陈默不默</b><time datetime="2026-11-06">11 月 6 日</time><span class="ref">评论《一台织机的第六十年》</span></div>
+            <p>织机噪声全程没压，戴耳机看有点顶，但确实比配轻音乐真实。老人下午修机那段，手上动作和机器声是对得上的。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">许</div>
+          <div>
+            <div class="cmt-head"><b>许三行</b><time datetime="2026-11-05">11 月 5 日</time><span class="ref">评论《末班车后座》</span></div>
+            <p>对焦失误那段我第一遍没看出来，看完手记再看才注意到。9 分钟讲一件小事，节奏不拖，比同题材多数作品干净。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">吴</div>
+          <div>
+            <div class="cmt-head"><b>吴桥</b><time datetime="2026-11-04">11 月 4 日</time><span class="ref">对频道分类的意见</span></div>
+            <p>把"隔窗拍摄"单独列成频道有点勉强，11 条里一半也能放进城市夜班。频道一多，检索反而要来回切。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">罗</div>
+          <div>
+            <div class="cmt-head"><b>罗屿</b><time datetime="2026-11-04">11 月 4 日</time><span class="ref">评论《雨棚下的两个箱子》</span></div>
+            <p>两分四十秒塞了 58 个镜头，我数到第 20 个就放弃了。故事其实就一次推搡加一次和解，切这么碎图什么。</p>
+          </div>
+        </li>
+        <li class="cmt">
+          <div class="avatar" aria-hidden="true">赵</div>
+          <div>
+            <div class="cmt-head"><b>赵拾贝</b><time datetime="2026-11-03">11 月 3 日</time><span class="ref">评论《旧胶片上的县剧团》</span></div>
+            <p>17 分钟我看了两遍。第二遍才发现舞台侧幕一直站着一个没上台的演员，镜头带了三次都没强调，这种做法现在很少见。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="newsTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">10 / 相关资讯</span>
+        <h2 id="newsTitle">与作品相关的行业动态</h2>
+      </div>
+      <ul class="news-list">
+        <li>
+          <time datetime="2026-11-07">11 月 7 日</time>
+          <div>
+            <p class="n-title">某短视频平台更新创作者分成细则，教程类内容单独计费</p>
+            <p class="n-desc">新细则把教程、幕后花絮与正片分开计费，站内 22 条低成本灯光方案类内容可能受影响，具体比例尚未公布。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11 月 5 日</time>
+          <div>
+            <p class="n-title">秋季独立影像展公布入围名单，14 部短片入选</p>
+            <p class="n-desc">入围作品中 9 部时长超过 10 分钟，与夏季展偏向 5 分钟以内作品的方向不同。展映排期尚未公开，据组委会说明，名单核对仍在进行。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11 月 3 日</time>
+          <div>
+            <p class="n-title">16mm 胶片扫描服务在三个城市新增网点</p>
+            <p class="n-desc">《旧胶片上的县剧团》使用的扫描服务方确认新增网点，单卷处理周期由 12 天缩短至 7 天，费用按卷计价未变。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-31">10 月 31 日</time>
+          <div>
+            <p class="n-title">一所高校将逐帧动画列为影像课程必修模块</p>
+            <p class="n-desc">课程要求完成不少于 90 秒的逐帧作品，使用纸片或黏土均可。据课程表，该模块共 32 学时，其中 20 学时用于拍摄与后期。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="timelineTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">11 / 事件时间线</span>
+        <h2 id="timelineTitle">《雾港夜班》从开机到修订的四个月</h2>
+      </div>
+      <ul class="timeline">
+        <li>
+          <time datetime="2026-07-12">7 月 12 日</time>
+          <b>开机，码头值班室实景拍摄两晚</b>
+          <p>使用两台机器，一台固定机位，一台手持跟拍。第二晚遇到降雨，部分外景改到雨棚下完成。</p>
+        </li>
+        <li>
+          <time datetime="2026-08-30">8 月 30 日</time>
+          <b>初剪 18 分 40 秒，导演决定删去开场的手机特写</b>
+          <p>删减后叙事起点落在保安接班的动作上，观众进入场景更快，这一段在后续版本中未恢复。</p>
+        </li>
+        <li>
+          <time datetime="2026-10-18">10 月 18 日</time>
+          <b>平台版定稿 12 分 12 秒并上线</b>
+          <p>为适配移动端观看，压缩了两处等待镜头，同时在片尾加入一条拍摄地说明。</p>
+        </li>
+        <li>
+          <time datetime="2026-11-07">11 月 7 日</time>
+          <b>影展版与导演音轨同步入库</b>
+          <p>补回 2 分 10 秒码头空镜，总时长 14 分 22 秒。音轨中提到底噪过高，现场未加降噪处理。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="recTitle">
+      <div class="sec-head">
+        <span class="sec-kicker">12 / 相关推荐</span>
+        <h2 id="recTitle">按关键词继续找</h2>
+      </div>
+      <div class="rec-tags">
+        <a href="/#featured">城市夜班题材短片</a>
+        <a href="/#featured">手艺人纪录片段</a>
+        <a href="/#deep">三分钟以内剧情短片</a>
+        <a href="/#featured">纸片逐帧动画</a>
+        <a href="/#featured">手机竖拍转横画幅</a>
+        <a href="/#guide">一镜到底实验作品</a>
+        <a href="/#featured">地方戏曲影像</a>
+        <a href="/#deep">片尾反转短片清单</a>
+        <a href="/#latest">低成本灯光方案</a>
+        <a href="/#faq">创作者手记与修订记录</a>
+      </div>
+    </section>
+
+  </article>
+
+  <aside class="side-col" aria-label="侧栏导航与榜单">
+    <nav class="side-card" aria-label="栏目索引">
+      <h2>栏目索引</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#featured">精选作品</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">题材频道</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#recTitle">相关推荐</a></li>
+      </ul>
+    </nav>
+    <div class="side-card">
+      <h2>二刷率榜 · 11 月 7 日</h2>
+      <ol class="bill-list">
+        <li><div>旧胶片上的县剧团<span class="b-sub">二刷比例 29%，17:31</span></div></li>
+        <li><div>一台织机的第六十年<span class="b-sub">二刷比例 26%，19:05</span></div></li>
+        <li><div>雾港夜班<span class="b-sub">二刷比例 21%，14:22</span></div></li>
+        <li><div>纸城漫游<span class="b-sub">二刷比例 18%，06:40</span></div></li>
+        <li><div>末班车后座<span class="b-sub">二刷比例 15%，09:08</span></div></li>
+      </ol>
+    </div>
+    <div class="side-card">
+      <h2>归档口径</h2>
+      <p class="side-fact">片长、拍摄设备、拍摄年月、素材授权为必填四项。播放量由提交者手填并标注日期。<b>386</b> 条作品中，记录完整 <b>312</b> 条，待补 <b>74</b> 条。最近核对时间 11 月 7 日。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <span class="brand-name" style="font-size:19px;font-weight:800">艾彩<span style="color:#f2a03d">原创视频</span></span>
+      <p>按题材、片长与拍摄手法归档独立影像，把每一条作品的版本差异和创作者说明留在条目里，方便横向比较而不是只看热度。</p>
+      <p style="color:#8b8476;font-size:12.5px">页面更新时间：2026 年 11 月 8 日，对应正文《最新更新》板块 11 月 4 日至 7 日的六条入库与修订记录。</p>
+    </div>
+    <div class="foot-col">
+      <h3>内容栏目</h3>
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#featured">精选内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">题材频道</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h3>参与与说明</h3>
+      <ul>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">观众评论</a></li>
+        <li><a href="/#recTitle">相关推荐</a></li>
+        <li><a href="/#timelineTitle">事件时间线</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="foot-bottom-inner">
+      <span>站内条目以为示例数据，片长、播放量与工时来自提交者填写，未经第三方核验。</span>
+      <span>© 2026 艾彩原创视频 · 内容版权归各创作者所有</span>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" id="topBtn" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 720){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 搜索：本地查找正文条目 */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var msg = document.getElementById('searchMsg');
+  var cache = null;
+
+  function buildIndex(){
+    var nodes = document.querySelectorAll('h2, h3, .upd-title, .n-title, .ch-item b, .rec-tags a, .faq summary');
+    var list = [];
+    nodes.forEach(function(n){
+      var text = (n.textContent || '').trim();
+      if(!text) return;
+      list.push({text: text.toLowerCase(), el: n, raw: text});
+    });
+    return list;
+  }
+
+  if(form && input && msg){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim().toLowerCase();
+      msg.classList.remove('show');
+      msg.textContent = '';
+      if(!q){ return; }
+      if(!cache){ cache = buildIndex(); }
+      var hit = cache.filter(function(item){ return item.text.indexOf(q) !== -1; });
+      if(hit.length === 0){
+        msg.textContent = '没有找到与“' + input.value.trim() + '”匹配的作品或频道，可以换用题材词，例如“夜班”“逐帧”“纪录”。';
+        msg.classList.add('show');
+        return;
+      }
+      var target = hit[0].el;
+      var box = target.closest('section') || target;
+      if(box && box.scrollIntoView){
+        box.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+      if(target.tagName === 'SUMMARY' && target.parentElement){
+        target.parentElement.open = true;
+      }
+      msg.textContent = '找到 ' + hit.length + ' 处匹配，已定位到“' + hit[0].raw + '”。';
+      msg.classList.add('show');
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function updateActive(){
+    var pos = window.scrollY + 170;
+    var current = null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ current = sec; }
+    });
+    sideLinks.forEach(function(a){
+      var id = a.getAttribute('href').replace('/#','');
+      if(current && id === current.id){
+        a.classList.add('active');
+        a.setAttribute('aria-current','true');
+      } else {
+        a.classList.remove('active');
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  /* 回顶按钮 */
+  var topBtn = document.getElementById('topBtn');
+  function onScroll(){
+    if(topBtn){
+      if(window.scrollY > 600){ topBtn.classList.add('show'); }
+      else { topBtn.classList.remove('show'); }
+    }
+    updateActive();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+    });
+  }
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "艾彩原创视频",
+  "description": "聚焦独立影像创作的作品索引站，收录剧情短片、纪录片段、实验动画与幕后手记，提供作品分析、创作指南与按题材检索的频道目录。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "原创视频的“原创”在这里具体指什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "指影像素材由创作者本人拍摄或绘制，剪辑、配乐、字幕自行完成；使用他人素材须在条目里注明来源与授权方式。归档里有 23 条使用了外采环境音，均在说明中列出录音地点和采集日期。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一条短片为什么会出现两个时长？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "版本差异。发布方常在平台版与影展版之间保留不同长度。《雾港夜班》平台版 12 分 12 秒，影展版 14 分 22 秒，差在码头空镜和一段无对白的等待镜头，条目页按入库日期分列。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "片长三分钟以内的作品，是不是都为了迎合推荐？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "部分是的，数据上能看到前 8 秒冲突密度和完播率相关。但 47 条三分钟以内作品里，有 14 条明确写在影展或活动征集的要求里，与平台算法无关。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "逐帧动画的工时是怎么算出来的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按作者提供的拍摄日志逐日累加，只计拍摄与后期，不计前期构思。《纸城漫游》日志显示 26 天、每天约 4 小时，合计 104 小时，成片 6 分 40 秒、每秒 12 帧。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "条目里的播放量数据多久更新一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "由提交者手动填写并标注填写日期，站内不做自动抓取，因此不同条目的播放量可能不是同一天的数值。截止 11 月 7 日，最近一次集中更新覆盖 62 条。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "投稿被标为“待补”会影响展示吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不影响入库和检索，但在按记录完整排序时会排在后面。缺项通常集中在拍摄设备和素材授权两项，补齐后可申请修订，修订记录会在条目下方留痕。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+  </html>
