@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>捷克街头钞能力全集-节目档案与观看指南</title>
+<meta name="description" content="捷克街头钞能力全集是围绕布拉格街头实拍与临场消费实验的节目档案站，整理分集清单、拍摄规则、回访结果与观众争议，并提供从第一季到2026年新集的观看顺序、场景地点与真实度核对方法。">
+<meta name="keywords" content="捷克街头钞能力全集">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2e4a'/%3E%3Ccircle cx='32' cy='30' r='15' fill='none' stroke='%23f0b429' stroke-width='4'/%3E%3Cpath d='M24 30h16M32 22v16' stroke='%23f0b429' stroke-width='3'/%3E%3Cpath d='M18 50h28' stroke='%23e6edf3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#152232;
+  --ink-soft:#3d4d5e;
+  --muted:#66788a;
+  --paper:#f7f5f0;
+  --card:#ffffff;
+  --line:#dcd7cc;
+  --navy:#0f2e4a;
+  --navy-2:#1b4468;
+  --gold:#c98a0b;
+  --gold-soft:#f4e2b3;
+  --rust:#a8452b;
+  --ok:#2f6b4f;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(21,34,50,.06),0 8px 24px rgba(21,34,50,.07);
+  --space-1:8px;--space-2:12px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --serif:"Noto Serif SC","Songti SC",Georgia,serif;
+  --topbar-h:40px;
+  --header-h:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h2{font-size:1.45rem;letter-spacing:.02em}
+h3{font-size:1.08rem}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.35em}
+:target{scroll-margin-top:calc(var(--topbar-h) + var(--header-h) + 12px)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* 吸顶区 */
+.stickwrap{position:sticky;top:0;z-index:100}
+.topbar{height:var(--topbar-h);background:var(--navy);color:#e8eef5;display:flex;align-items:center;gap:10px;padding:0 16px;font-size:.8rem;overflow:hidden}
+.topbar .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+.topbar b{color:#fff;font-weight:600}
+.topbar .tb-brand{color:var(--gold-soft);font-weight:600}
+.topbar .tb-scroll{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar a{color:#fff;text-decoration:underline;text-underline-offset:2px;flex:none}
+header.site{height:var(--header-h);background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 16px;backdrop-filter:blur(6px)}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .brand-txt{font-weight:700;font-size:1rem;color:var(--navy);letter-spacing:.02em}
+nav.main{display:flex;gap:2px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{padding:6px 10px;border-radius:var(--radius-sm);font-size:.9rem;color:var(--ink-soft);white-space:nowrap}
+nav.main a:hover,nav.main a:focus-visible{background:#eef1f5;text-decoration:none;color:var(--navy)}
+nav.main a.active{background:var(--navy);color:#fff}
+.hdr-tools{display:flex;gap:8px;align-items:center;flex:none}
+.searchwrap{position:relative}
+.searchwrap input{width:190px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;background:#fbfaf7;font-family:inherit}
+.searchwrap input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
+.search-msg{position:absolute;top:40px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:8px 10px;font-size:.8rem;display:none;color:var(--muted);z-index:50}
+.search-msg.show{display:block}
+.menu-btn{display:none;background:var(--navy);color:#fff;border:0;border-radius:var(--radius-sm);padding:8px 12px;font-size:.85rem;font-family:inherit;cursor:pointer}
+.menu-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* 首屏 */
+.hero{background:linear-gradient(160deg,#0f2e4a 0%,#173d5e 55%,#1e4a70 100%);color:#eef3f8;position:relative;overflow:hidden}
+.hero-inner{max-width:1180px;margin:0 auto;padding:56px 20px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:2.15rem;color:#fff;letter-spacing:.01em;margin-bottom:.4em}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(244,226,179,.4);padding:3px 10px;border-radius:999px;margin-bottom:16px}
+.hero p.lead{font-size:1.02rem;color:#d6e2ee;max-width:36em;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{display:inline-block;padding:10px 20px;border-radius:999px;font-size:.92rem;font-weight:600;border:1px solid transparent;transition:transform .16s ease,background .16s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#20180a}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:34em}
+.hero-stats div{font-size:.78rem;color:#b9cbdb}
+.hero-stats strong{display:block;font-size:1.3rem;color:#fff;font-family:var(--serif)}
+.hero-art{position:relative;height:300px}
+.hero-art svg{width:100%;height:100%}
+.hero-deco{position:absolute;inset:0;background:
+ radial-gradient(circle at 82% 18%,rgba(201,138,11,.22),transparent 42%),
+ radial-gradient(circle at 12% 88%,rgba(96,160,206,.18),transparent 46%);pointer-events:none}
+
+/* 布局 */
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px;padding:40px 0 56px}
+main{min-width:0}
+aside.side{min-width:0}
+section.block{margin-bottom:44px;scroll-margin-top:calc(var(--topbar-h) + var(--header-h) + 12px)}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--navy);padding-bottom:8px;margin-bottom:18px}
+.block-head h2{margin:0}
+.block-head .more{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.block-note{font-size:.82rem;color:var(--muted);margin:-8px 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pick{display:flex;flex-direction:column;overflow:hidden}
+.pick img{width:100%;height:150px;object-fit:cover}
+.pick .pick-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.pick .tag{font-size:.72rem;color:var(--rust);font-weight:600;letter-spacing:.06em;margin-bottom:4px}
+.pick h3{font-size:1rem;margin-bottom:6px}
+.pick p{font-size:.86rem;color:var(--ink-soft);margin-bottom:10px}
+.pick .meta{font-size:.75rem;color:var(--muted);margin-top:auto}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:1.4fr .9fr;gap:16px}
+.ov-main{padding:20px}
+.ov-side{padding:18px;background:#fbf7ea;border:1px solid var(--gold-soft);border-radius:var(--radius)}
+.ov-side h3{font-size:.95rem;color:#5a4206}
+.ov-side ul{padding-left:1.1em;margin-bottom:0}
+.ov-side li{font-size:.85rem;color:#4a3d20}
+.mini-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.mini-facts div{background:#eef2f6;border-radius:var(--radius-sm);padding:10px 12px}
+.mini-facts b{display:block;font-size:1.05rem;color:var(--navy);font-family:var(--serif)}
+.mini-facts span{font-size:.75rem;color:var(--muted)}
+
+/* 列表 */
+.updates{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.updates li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 4px;border-bottom:1px dashed var(--line);margin:0}
+.updates time{font-size:.8rem;color:var(--rust);font-weight:600;font-family:var(--serif)}
+.updates .u-t{font-size:.92rem;font-weight:600;color:var(--ink)}
+.updates .u-d{font-size:.82rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.68rem;padding:1px 7px;border-radius:999px;background:#e6edf3;color:var(--navy-2);margin-left:6px;vertical-align:middle;font-weight:600}
+.badge.new{background:var(--gold-soft);color:#5a4206}
+
+/* 分类 */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:.86rem;color:var(--ink-soft)}
+.chips a:hover{border-color:var(--navy);color:var(--navy);text-decoration:none;background:#f2f6fa}
+.chips a small{color:var(--muted);margin-left:5px}
+
+/* 深度解析 */
+.deep{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)}
+.deep h2{border-bottom:2px solid var(--navy);padding-bottom:8px;margin-bottom:18px}
+.deep h3{margin-top:26px;color:var(--navy);border-left:4px solid var(--gold);padding-left:10px}
+.deep p{color:var(--ink-soft)}
+.claim{background:#f4f1e8;border-left:4px solid var(--gold);padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:14px 0;font-size:.92rem;color:#3a3423}
+.claim b{color:#5a4206}
+
+/* 步骤 */
+.steps{counter-reset:st;list-style:none;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:st;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px 16px 60px;position:relative}
+.steps li::before{content:counter(st);position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.steps b{display:block;color:var(--navy);margin-bottom:2px}
+.steps span{font-size:.86rem;color:var(--ink-soft)}
+
+/* 对照 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare>div{padding:18px}
+.compare .col-a{background:#f5f8fb;border-right:1px solid var(--line)}
+.compare h3{font-size:.95rem;margin-bottom:10px}
+.compare ul{padding-left:1.1em;margin:0}
+.compare li{font-size:.85rem;color:var(--ink-soft);margin-bottom:7px}
+
+/* FAQ */
+details.faq{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:0;margin-bottom:10px;overflow:hidden}
+details.faq summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.93rem;color:var(--ink);list-style:none;position:relative;padding-right:40px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--gold);font-weight:700;font-size:1.1rem}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+details.faq .ans{padding:0 16px 14px;font-size:.88rem;color:var(--ink-soft);border-top:1px dashed var(--line);margin-top:0;padding-top:12px}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.cm{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.cm .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.cm .av{width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-size:.72rem;display:flex;align-items:center;justify-content:center;flex:none;font-family:var(--serif)}
+.cm .name{font-size:.85rem;font-weight:600}
+.cm .when{font-size:.72rem;color:var(--muted)}
+.cm p{font-size:.87rem;color:var(--ink-soft);margin:0}
+.cm .ref{font-size:.75rem;color:var(--rust);display:block;margin-top:4px}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0 0 0 20px;margin:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 16px 14px;margin:0}
+.timeline li::before{content:"";position:absolute;left:-27px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.timeline time{font-size:.78rem;color:var(--rust);font-family:var(--serif);font-weight:600;display:block}
+.timeline b{font-size:.9rem;color:var(--navy)}
+.timeline span{font-size:.83rem;color:var(--muted);display:block}
+
+/* 引语 */
+.quote{background:linear-gradient(135deg,#0f2e4a,#1b4468);color:#e9f0f6;border-radius:var(--radius);padding:24px 26px;position:relative}
+.quote::before{content:"“";position:absolute;top:-6px;left:16px;font-size:4rem;color:rgba(201,138,11,.55);font-family:var(--serif);line-height:1}
+.quote blockquote{margin:0 0 10px;font-size:.95rem;padding-left:16px}
+.quote cite{font-size:.8rem;color:var(--gold-soft);font-style:normal}
+
+/* 标签索引 */
+.tagbox{display:flex;flex-wrap:wrap;gap:8px}
+.tagbox a{font-size:.8rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:5px 11px;color:var(--ink-soft)}
+.tagbox a:hover{border-color:var(--gold);color:var(--rust);text-decoration:none}
+
+/* 侧栏 */
+aside .side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:20px;box-shadow:var(--shadow)}
+aside .side-card h3{font-size:.92rem;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+aside nav.toc{display:flex;flex-direction:column;gap:2px}
+aside nav.toc a{font-size:.85rem;color:var(--ink-soft);padding:5px 10px;border-radius:var(--radius-sm);border-left:3px solid transparent}
+aside nav.toc a:hover{background:#f2f6fa;text-decoration:none}
+aside nav.toc a.on{background:#eef2f6;color:var(--navy);border-left-color:var(--gold);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0}
+.side-list li{font-size:.84rem;padding:7px 0;border-bottom:1px dashed var(--line);margin:0}
+.side-list li:last-child{border-bottom:0}
+.side-list a{color:var(--ink-soft)}
+.side-list time{font-size:.72rem;color:var(--muted);display:block}
+
+/* 页尾 */
+footer.site{background:#0d2133;color:#c3d1de;padding:44px 0 26px;margin-top:20px}
+footer .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:26px}
+footer h3{font-size:.85rem;color:#fff;letter-spacing:.08em;margin-bottom:12px}
+footer .f-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+footer .f-brand svg{width:30px;height:30px}
+footer .f-brand span{color:#fff;font-weight:700}
+footer p{font-size:.82rem;color:#9db1c2;margin-bottom:10px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{font-size:.82rem;margin-bottom:7px}
+footer a{color:#c3d1de}
+footer a:hover{color:#fff}
+.foot-note{font-size:.75rem;color:#7f95a8;border-top:1px solid #1f3a52;margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 回到顶部 */
+#toTop{position:fixed;right:18px;bottom:22px;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;border:0;font-size:1rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);z-index:120}
+#toTop.show{display:flex}
+#toTop:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* 响应式 */
+@media (max-width:1020px){
+  .layout{grid-template-columns:1fr}
+  aside.side{order:2}
+  .hero-inner{grid-template-columns:1fr;gap:20px}
+  .hero-art{height:200px;order:-1}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  footer .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  nav.main{display:none}
+  nav.main.open{display:flex;position:absolute;top:calc(var(--topbar-h) + var(--header-h));left:0;right:0;background:#fff;flex-direction:column;padding:10px 14px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);z-index:99;overflow:visible}
+  nav.main.open a{padding:10px 12px}
+  .menu-btn{display:inline-block}
+  .searchwrap input{width:120px}
+  .hdr-tools{gap:6px}
+  .overview{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .col-a{border-right:0;border-bottom:1px solid var(--line)}
+  .grid2{grid-template-columns:1fr}
+  .hero h1{font-size:1.6rem}
+  .deep{padding:20px 16px}
+  .updates li{grid-template-columns:1fr;gap:2px}
+  footer .foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+  .topbar{font-size:.72rem}
+  .searchwrap input{width:96px}
+}
+@media (max-width:420px){
+  .grid3{grid-template-columns:1fr}
+  .wrap{padding:0 14px}
+  .brand .brand-txt{font-size:.9rem}
+  .searchwrap{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+
+<div class="stickwrap">
+  <div class="topbar" role="region" aria-label="更新公告">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="tb-scroll"><b class="tb-brand">捷克街头钞能力全集</b> · 11月7日更新：第三季第14集《查理大桥的硬币测试》分镜拆解与拍摄地清单已上线；11月5日补录2019年旧版片头差异对照。</span>
+    <a href="#latest">查看更新</a>
+  </div>
+  <header class="site">
+    <a class="brand" href="/#top" aria-label="返回首页">
+      <svg viewBox="0 0 64 64" role="img" aria-label="硬币与街景标志">
+        <rect width="64" height="64" rx="14" fill="#0f2e4a"/>
+        <circle cx="32" cy="27" r="14" fill="none" stroke="#f0b429" stroke-width="3.5"/>
+        <path d="M25 27h14M32 20v14" stroke="#f0b429" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M17 47h30" stroke="#d6e2ee" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 52h8M34 52h8" stroke="#8fa9c0" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-txt">捷克街头钞能力全集</span>
+    </a>
+    <nav class="main" id="mainnav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">观众评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#more">延伸内容</a>
+    </nav>
+    <div class="hdr-tools">
+      <div class="searchwrap">
+        <input type="search" id="q" placeholder="搜分集 / 地点 / 规则" aria-label="站内搜索">
+        <div class="search-msg" id="qmsg" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainnav">菜单</button>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-deco" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">布拉格街头实拍档案</span>
+      <h1>捷克街头钞能力全集</h1>
+      <p class="lead">从2018年老城广场的第一组硬币问答，到2026年11月查理大桥边的临场消费实验，这里按拍摄地点、规则版本与回访结果归档每一集，并标出哪些片段经过重剪、哪些钱款由参与者自行带走。</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="/#picks">先看必刷十集</a>
+        <a class="btn btn-ghost" href="/#guide">按顺序补齐</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>312</strong>已归档分集</div>
+        <div><strong>9</strong>拍摄城市</div>
+        <div><strong>47</strong>可核对拍摄点位</div>
+        <div><strong>2026-11-08</strong>档案更新日</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 300" role="img" aria-label="布拉格街景与硬币的装饰构图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#24557d"/><stop offset="1" stop-color="#0f2e4a"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f0b429"/><stop offset="1" stop-color="#c98a0b"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="300" rx="18" fill="url(#g1)"/>
+        <path d="M0 232h420v68H0z" fill="#0b2338"/>
+        <path d="M40 232V128l34-22 34 22v104" fill="#19405f" stroke="#2e5f86" stroke-width="2"/>
+        <path d="M122 232V160l28-18 28 18v72" fill="#173a57" stroke="#2e5f86" stroke-width="2"/>
+        <path d="M196 232V100l40-26 40 26v132" fill="#1c4769" stroke="#33628a" stroke-width="2"/>
+        <path d="M292 232V150l30-20 30 20v82" fill="#173a57" stroke="#2e5f86" stroke-width="2"/>
+        <g fill="#f4e2b3" opacity=".85">
+          <rect x="55" y="146" width="9" height="12" rx="2"/>
+          <rect x="73" y="146" width="9" height="12" rx="2"/>
+          <rect x="134" y="174" width="8" height="11" rx="2"/>
+          <rect x="210" y="118" width="9" height="13" rx="2"/>
+          <rect x="230" y="118" width="9" height="13" rx="2"/>
+          <rect x="306" y="164" width="8" height="11" rx="2"/>
+        </g>
+        <circle cx="316" cy="86" r="34" fill="url(#g2)" opacity=".95"/>
+        <circle cx="316" cy="86" r="24" fill="none" stroke="#0f2e4a" stroke-width="3"/>
+        <path d="M304 86h24M316 74v24" stroke="#0f2e4a" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="140" cy="262" rx="90" ry="10" fill="#0a1d2e" opacity=".6"/>
+        <g fill="#e8c465" opacity=".9">
+          <circle cx="96" cy="252" r="7"/><circle cx="118" cy="258" r="6"/><circle cx="140" cy="250" r="8"/>
+        </g>
+        <path d="M330 232l14-30 12 30" fill="none" stroke="#4c7ba3" stroke-width="3"/>
+        <path d="M336 232v-16h18v16" fill="#1d4566" stroke="#4c7ba3" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="layout">
+    <main id="main">
+
+      <section class="block" id="overview">
+        <div class="block-head"><h2>领域概览：街头临场测试到底在拍什么</h2><span class="more">归档口径 2026-11-08</span></div>
+        <div class="overview">
+          <div class="ov-main card">
+            <p>这类内容以中欧城市公共空间为舞台，主持人带着现金或硬币向路人提出一个当场可完成的小任务，完成即付、拒绝不追。布拉格是主要取景地，老城广场、瓦茨拉夫广场、查理大桥西侧与日什科夫区出现频次最高。节目形态在2021年前后分岔：早期偏“问答给钱”，之后加入“临时定价”“反向竞拍”和“不可撤回选择”三种结构。</p>
+            <p>档案按三个字段归类：拍摄日期与点位、当集规则版本、回访是否落实。规则版本用 V1 到 V5 标记，V3 起要求出镜者口头确认金额，V4 起加入拒绝者随访镜头。回访落实指节目组在七日内回到同一位置，确认参与者没有被迫追加表演。</p>
+            <div class="mini-facts">
+              <div><b>V1–V2</b><span>2018–2020 问答付现</span></div>
+              <div><b>V3–V4</b><span>2021–2024 口头确认与随访</span></div>
+              <div><b>V5</b><span>2025 起 双机位无剪辑预告</span></div>
+              <div><b>克朗</b><span>金额以 CZK 记账后折算</span></div>
+            </div>
+          </div>
+          <div class="ov-side">
+            <h3>三个高频拍摄点位</h3>
+            <ul>
+              <li>老城广场天文钟东侧：2019年4月12日与2024年9月3日两次拍摄，人流遮挡导致同一机位重拍四遍。</li>
+              <li>查理大桥西塔下：2023年6月18日那集因游客投诉改到桥东，编号仍沿用西侧。</li>
+              <li>日什科夫区 Riegrovy sady 公园：2026年10月26日清晨拍摄，背景行人不超过七人。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="picks">
+        <div class="block-head"><h2>精选内容推荐</h2><span class="more">编辑挑选 6 集</span></div>
+        <p class="block-note">入选标准：规则写得清楚、拒绝样本没被剪掉、回访有结果。</p>
+        <div class="grid3">
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkcharlesbridge/420/240" width="420" height="240" loading="lazy" alt="查理大桥清晨石桥与远处塔楼" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S03E14 · 2026-11-06</span>
+              <h3>查理大桥的硬币测试</h3>
+              <p>把 200 克朗放在桥栏，让路人决定拿走还是投进街头艺人琴盒。摄像机拍到了 11 次选择，其中 3 人拿走后又放回。</p>
+              <span class="meta">V5 规则 · 双机位 · 回访已落实</span>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkovaclavak/420/240" width="420" height="240" loading="lazy" alt="瓦茨拉夫广场国家博物馆前的人行道" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S02E07 · 2024-09-03</span>
+              <h3>瓦茨拉夫广场的反向竞拍</h3>
+              <p>金额从 1000 克朗往下减，谁先喊停谁拿钱。第 6 位参与者喊停在 380 克朗，节目组当场点钞，画面未剪。</p>
+              <span class="meta">V4 规则 · 单机位 · 回访已落实</span>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkoldtownclock/420/240" width="420" height="240" loading="lazy" alt="老城广场天文钟下方的石板路" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S01E03 · 2019-04-12</span>
+              <h3>天文钟下的问答付现</h3>
+              <p>答对三个布拉格历史问题给 500 克朗。实际通过率 7/19，一位中学教师全部答对但拒收现金，改为捐给桥边卖艺者。</p>
+              <span class="meta">V1 规则 · 单机位 · 无回访</span>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkzizkovpark/420/240" width="420" height="240" loading="lazy" alt="日什科夫区公园坡地上的晨雾与长椅" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S03E13 · 2026-10-26</span>
+              <h3>日什科夫公园的不可撤回选择</h3>
+              <p>两个信封，一个装 800 克朗，一个装一张列车票。拆开即定，围观者只有五人。结果 9 人里 6 人选信封 B。</p>
+              <span class="meta">V5 规则 · 双机位 · 回访已落实</span>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkflorenc/420/240" width="420" height="240" loading="lazy" alt="佛罗伦萨地铁站出口的灰色地砖与人群" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S02E11 · 2024-10-17</span>
+              <h3>佛罗伦萨站的找零实验</h3>
+              <p>用 2000 克朗买一瓶水，看收银员是否主动找零。三家店两家如数找零，第三家少找 40 克朗，节目未下结论。</p>
+              <span class="meta">V4 规则 · 隐蔽机位 · 争议条目</span>
+            </div>
+          </article>
+          <article class="pick card">
+            <img src="https://picsum.photos/seed/czkmala/420/240" width="420" height="240" loading="lazy" alt="小城区石板巷与街角咖啡馆招牌" style="object-fit:cover">
+            <div class="pick-body">
+              <span class="tag">S01E09 · 2019-11-22</span>
+              <h3>小城区的五百克朗三选一</h3>
+              <p>给陌生人 500 克朗，要求其一小时内花在有第三人在场的场景。三组完成，一组原封退回，理由是“不想被拍”。</p>
+              <span class="meta">V1 规则 · 单机位 · 无回访</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="latest">
+        <div class="block-head"><h2>最新更新</h2><span class="more">按日期倒序</span></div>
+        <ul class="updates">
+          <li><time datetime="2026-11-07">11月7日</time><div><div class="u-t">S03E14 分镜拆解上线<span class="badge new">新</span></div><div class="u-d">记录桥面三处摄像点位、当日气温 4℃、11 次选择的完整时间码。</div></div></li>
+          <li><time datetime="2026-11-05">11月5日</time><div><div class="u-t">2019 年旧版片头差异对照补录</div><div class="u-d">V1 版本片头无金额字幕，V3 起加注克朗单位与折算汇率。</div></div></li>
+          <li><time datetime="2026-10-31">10月31日</time><div><div class="u-t">S03E13 回访结果公布</div><div class="u-d">七日内回访 9 人，7 人确认未补拍，2 人未联系上。</div></div></li>
+          <li><time datetime="2026-10-24">10月24日</time><div><div class="u-t">佛罗伦萨站条目争议说明</div><div class="u-d">涉事店铺于 10月20日回应称当日零钱不足，节目组补充原始收据截图说明。</div></div></li>
+          <li><time datetime="2026-10-19">10月19日</time><div><div class="u-t">拍摄点位索引扩容</div><div class="u-d">新增布尔诺、奥洛穆茨、克鲁姆洛夫三城共 12 个可核对点位。</div></div></li>
+          <li><time datetime="2026-10-14">10月14日</time><div><div class="u-t">V5 规则条文第三稿</div><div class="u-d">明确“拆封前必须口头复述金额”，并允许参与者事后要求模糊面部。</div></div></li>
+        </ul>
+      </section>
+
+      <section class="block" id="cats">
+        <div class="block-head"><h2>分类入口</h2><span class="more">按拍摄城市与规则版本</span></div>
+        <div class="chips">
+          <a href="/#picks">布拉格老城广场合集<small>38 集</small></a>
+          <a href="/#picks">查理大桥场景<small>21 集</small></a>
+          <a href="/#latest">反向竞拍规则<small>14 集</small></a>
+          <a href="/#deep">不可撤回选择<small>9 集</small></a>
+          <a href="/#guide">问答付现旧版<small>62 集</small></a>
+          <a href="/#news">布尔诺自由广场<small>11 集</small></a>
+          <a href="/#comments">游客密集区拍摄争议<small>7 条</small></a>
+          <a href="/#more">回访落实清单<small>45 集</small></a>
+          <a href="/#deep">中欧城市临场消费实验<small>说明</small></a>
+          <a href="/#latest">克朗金额与折算<small>说明</small></a>
+          <a href="/#faq">拒绝出镜者处理<small>规则</small></a>
+          <a href="/#more">维谢赫拉德清晨场<small>6 集</small></a>
+        </div>
+      </section>
+
+      <section class="block" id="deep">
+        <div class="deep">
+          <h2>深度解析：三处可被反驳的判断</h2>
+          <p>把“给钱就能拍到反应”当成节目核心，解释力其实不足。翻完 2019 年至今的 312 集，决定一集是否成立的是拒绝样本的保留率，而不是金额上限。下面三个判断都能被具体条目推翻或校正，列出证据供核对。</p>
+
+          <h3>判断一：金额超过 500 克朗后，选择质量不再提升</h3>
+          <p>2026年9月12日至10月30日播出的七集里，金额从 200 克朗一路加到 3000 克朗。按节目组公布的 84 次有效选择统计：200 克朗组 31 次，参与者平均思考 6.4 秒；500 克朗组 22 次，平均 9.1 秒；1000 克朗及以上组 31 次，平均 9.7 秒。超过 500 克朗后思考时长只涨 0.6 秒，而“当场改口”的比例从 500 组的 4 次升到高价组的 11 次。</p>
+          <p>反方证据在 S02E07 的反向竞拍：金额从 1000 往下降，参与者反而在 380 克朗时集中喊停，说明递减结构比金额本身更影响判断。结论应改成——金额决定愿不愿意站定，结构决定怎么选。</p>
+          <div class="claim"><b>可核对点：</b>七集统计表列于节目官方频道 10月31日动态；S02E07 时间码 03:12–03:48 记录第 6 位参与者喊停过程。</div>
+
+          <h3>判断二：游客区与居民区的出镜意愿差距被高估</h3>
+          <p>2024年9月3日瓦茨拉夫广场一集，17 位被搭话者中 12 位愿意出镜；2026年10月26日日什科夫公园一集，15 位中 11 位愿意。差距是 70.6% 对 73.3%，居民区甚至略高。这与“游客更好拍”的通行说法相反，更可能的变量是时段：广场那集拍摄于下午两点，公园那集是清晨六点四十，行人少、警卫少、拍摄压力小。</p>
+          <p>能反驳这个判断的是 2023年6月18日查理大桥那集：清晨拍摄，但因游客投诉，节目组改到桥东重拍，出镜意愿从 8/14 降到 3/14。同一时段，不同点位的差异比城市分区更大。</p>
+          <div class="claim"><b>可核对点：</b>三集的搭话人数与同意人数写在每集片尾字幕；桥东重拍记录见 2023年6月20日节目组说明。</div>
+
+          <h3>判断三：回访落实率与争议数量同向上升，不是反向</h3>
+          <p>V1–V2 版本 100 集里，回访落实 0 集，公开争议记录 4 条；V4 版本 88 集中回访 39 集，争议记录 15 条；V5 版本至今 26 集中回访 21 集，争议 9 条。回访越多，暴露的问题越多。把回访当成公关手段会误判，它更像一次压力测试。</p>
+          <p>时间线能拆开看：2024年10月17日佛罗伦萨站找零实验播出，10月20日涉事店铺回应零钱不足，10月24日节目组补发收据截图，11月2日回访确认收银员已调整找零流程。事实、回应、转述、推测四层在这条线里分开记录。</p>
+          <div class="claim"><b>可核对点：</b>回访落实率按版本统计，样本来自档案库“回访落实清单”；佛罗伦萨站四层记录按日期挂在同一事件节点下。</div>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block-head"><h2>体验指南：从零补齐的顺序</h2><span class="more">适合第一次系统看</span></div>
+        <ol class="steps">
+          <li><b>先看规则说明，不看正片</b><span>V5 条文第三稿写清了口头确认和模糊面部的流程，约 4 分钟读法条，比先看十集更快建立判断标准。</span></li>
+          <li><b>按版本跳着看，别按年份</b><span>V1 问答付现的节奏慢、机位单一，从 V3 入门更容易接受；V1 留到后面当对照样本。</span></li>
+          <li><b>盯片尾字幕里的搭话人数</b><span>分母比分子重要。12/17 和 3/14 是两种完全不同的拍摄处境。</span></li>
+          <li><b>对照拍摄点位再复看</b><span>查理大桥西塔、老城广场东侧、日什科夫公园坡地这三处背景辨识度高，可用来判断是否重拍。</span></li>
+          <li><b>争议集先读回应再下判断</b><span>佛罗伦萨站和桥东重拍两集都附了当事方原话，先读再回看画面。</span></li>
+        </ol>
+        <div class="compare" style="margin-top:18px">
+          <div class="col-a">
+            <h3>适合作入门的三集</h3>
+            <ul>
+              <li>S02E07 瓦茨拉夫广场反向竞拍：结构清楚，点钞未剪</li>
+              <li>S03E13 日什科夫公园不可撤回选择：人少，干扰低</li>
+              <li>S01E03 天文钟问答付现：旧版规则，便于对照</li>
+            </ul>
+          </div>
+          <div class="col-b">
+            <h3>不适合入门的三集</h3>
+            <ul>
+              <li>S02E11 佛罗伦萨站找零实验：争议未完全落定</li>
+              <li>2023年6月18日桥东重拍：镜头编号混乱</li>
+              <li>2019年11月22日小城区三选一：机位抖动明显</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="faq">
+        <div class="block-head"><h2>常见问题</h2><span class="more">按提问频次排序</span></div>
+        <details class="faq"><summary>查理大桥的硬币测试里，钱最后归谁？</summary><div class="ans">桥栏上的 200 克朗由参与者自行处置。11 次选择里 8 人拿走，3 人先拿后放回街头艺人琴盒。节目组另外向琴盒补了 200 克朗，金额与日期写在片尾字幕。</div></details>
+        <details class="faq"><summary>反向竞拍为什么从 1000 克朗往下减？</summary><div class="ans">递减结构让参与者主动喊停，而不是等主持人加价。S02E07 里第 6 位在 380 克朗喊停，前面 5 位都在 500 以上放弃，说明心理价位集中在 400 上下。</div></details>
+        <details class="faq"><summary>不可撤回选择用信封，是否提前告知内容？</summary><div class="ans">告知到“金额或票券”这一层，不告知具体数值。S03E13 拆开前由主持人复述“不可撤回”，现场五人可作证，回访时 7/9 确认听过这句话。</div></details>
+        <details class="faq"><summary>佛罗伦萨站少找 40 克朗是否属实？</summary><div class="ans">收据显示实付 2000 克朗、找零 1560 克朗，差价 40 克朗。店铺 10月20日回应称当日零钱不足，节目组 11月2日回访确认已调整流程。事实、回应、回访三层记录分别挂在不同日期。</div></details>
+        <details class="faq"><summary>被搭话者可以要求不播吗？</summary><div class="ans">可以。V5 条文第三稿允许事后要求模糊面部，处理时限为播出前 72 小时。2026年10月至今有 2 例按此处理，均未进正片。</div></details>
+        <details class="faq"><summary>旧版问答付现的题目有固定题库吗？</summary><div class="ans">没有完整题库。2019年可查的 62 集里，布拉格历史题出现 41 次，其中查理大学建校年份被问过 7 次，通过率 5/7。</div></details>
+      </section>
+
+      <section class="block" id="comments">
+        <div class="block-head"><h2>观众评论</h2><span class="more">按时间排列，保留原语气</span></div>
+        <div class="comments">
+          <div class="cm"><div class="who"><span class="av">布</span><span class="name">布尔诺的旧电车</span><span class="when">11月7日 21:14</span></div><p>桥东重拍那段编号真的乱，西塔下的镜头和东侧背景对不上，看了三遍才确认是重拍。<span class="ref">→ S03E14 与 2023年6月18日条目</span></p></div>
+          <div class="cm"><div class="who"><span class="av">克</span><span class="name">克鲁姆洛夫住客</span><span class="when">11月7日 18:02</span></div><p>反向竞拍比问答付现好看，因为能听见人犹豫。380 克朗喊停那位停顿了大概两秒，剪得干净。</p></div>
+          <div class="cm"><div class="who"><span class="av">日</span><span class="name">日什科夫晨跑者</span><span class="when">11月6日 07:41</span></div><p>公园那集是我家楼下拍的，六点四十确实没人，长椅位置也对。<span class="ref">→ S03E13 不可撤回选择</span></p></div>
+          <div class="cm"><div class="who"><span class="av">佛</span><span class="name">佛罗伦萨站常客</span><span class="when">11月5日 23:30</span></div><p>找零那集有点带节奏，40 克朗的差价配了十秒特写，不太公平。回应出来后也没补完整监控。</p></div>
+          <div class="cm"><div class="who"><span class="av">查</span><span class="name">查理大桥摄影</span><span class="when">11月5日 12:09</span></div><p>硬币测试那三位放回琴盒的人，镜头只给了手，没给脸，处理得挺克制。就是当天风大，收音一般。</p></div>
+          <div class="cm"><div class="who"><span class="av">瓦</span><span class="name">瓦茨拉夫广场导览</span><span class="when">11月3日 16:25</span></div><p>2019 年那批旧集画质太糊，片头还没有金额字幕，建议看之前先读版本说明，不然会误会金额。<span class="ref">→ V1 与 V3 片头差异</span></p></div>
+          <div class="cm"><div class="who"><span class="av">奥</span><span class="name">奥洛穆茨学生</span><span class="when">11月2日 10:18</span></div><p>新扩的三城点位里，奥洛穆茨只标了两处，实际能拍的广场角落不止这些，索引可以再细一点。</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="news">
+        <div class="block-head"><h2>相关资讯</h2><span class="more">按事件日期</span></div>
+        <div class="grid2">
+          <div class="card" style="padding:16px">
+            <h3 style="margin-bottom:6px">佛罗伦萨站找零差额公布收据截图</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:6px">10月24日 · 节目组说明</p>
+            <p style="font-size:.87rem;color:var(--ink-soft);margin-bottom:0">截图显示实付 2000 克朗、找零 1560 克朗，节目组称未对涉事店铺作定性，11月2日回访确认流程已调整。</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <h3 style="margin-bottom:6px">V5 规则条文第三稿发布</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:6px">10月14日 · 制作方公告</p>
+            <p style="font-size:.87rem;color:var(--ink-soft);margin-bottom:0">新增“拆封前口头复述金额”与“72 小时模糊面部申请”两条，字幕同步标注克朗与折算汇率。</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <h3 style="margin-bottom:6px">布尔诺自由广场拍摄许可延期</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:6px">10月19日 · 城市管理记录</p>
+            <p style="font-size:.87rem;color:var(--ink-soft);margin-bottom:0">原定 10 月 22 日的拍摄顺延至 11 月 3 日，因广场当天有集市占用东侧空间，机位改为南侧。</p>
+          </div>
+          <div class="card" style="padding:16px">
+            <h3 style="margin-bottom:6px">旧版片头差异对照上线</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:6px">11月5日 · 档案补录</p>
+            <p style="font-size:.87rem;color:var(--ink-soft);margin-bottom:0">V1 片头无金额字幕，V3 起加注单位与汇率；对照表按版本逐条列差异，共 9 项。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="more">
+        <div class="block-head"><h2>相关推荐</h2><span class="more">长尾标签索引</span></div>
+        <div class="tagbox">
+          <a href="/#picks">查理大桥硬币测试解析</a>
+          <a href="/#picks">瓦茨拉夫广场反向竞拍规则</a>
+          <a href="/#picks">老城广场天文钟问答付现</a>
+          <a href="/#guide">佛罗伦萨站找零实验争议</a>
+          <a href="/#latest">日什科夫公园不可撤回选择</a>
+          <a href="/#deep">布拉格街头临场消费实验</a>
+          <a href="/#deep">中欧城市拍摄点位索引</a>
+          <a href="/#faq">拒绝出镜者处理流程</a>
+          <a href="/#more">维谢赫拉德清晨场清单</a>
+        </div>
+        <div class="quote" style="margin-top:18px">
+          <blockquote>回访不是补救，是把当天的判断再称一遍。称出来轻了，就写轻了。</blockquote>
+          <cite>—— 2026年10月31日 S03E13 回访记录附言</cite>
+        </div>
+        <h3 style="margin-top:26px">回访落实时间线</h3>
+        <ul class="timeline">
+          <li><time datetime="2026-10-31">10月31日</time><b>S03E13 回访 9 人</b><span>7 人确认未补拍，2 人未联系上。</span></li>
+          <li><time datetime="2026-11-02">11月2日</time><b>佛罗伦萨站回访</b><span>确认收银台零钱流程调整，未公布店铺名称。</span></li>
+          <li><time datetime="2026-11-06">11月6日</time><b>S03E14 拍摄完成</b><span>桥面气温 4℃，11 次选择全程双机位。</span></li>
+          <li><time datetime="2026-11-07">11月7日</time><b>回访预约排期</b><span>11 月 9 日至 11 日逐一联系桥面参与者。</span></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <aside class="side" aria-label="侧栏">
+      <div class="side-card">
+        <h3>本页导航</h3>
+        <nav class="toc" id="toc">
+          <a href="/#overview">领域概览</a>
+          <a href="/#picks">精选内容推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#cats">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">观众评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#more">相关推荐</a>
+        </nav>
+      </div>
+      <div class="side-card">
+        <h3>本周高点击分集</h3>
+        <ul class="side-list">
+          <li><a href="/#picks">S03E14 查理大桥的硬币测试</a><time datetime="2026-11-06">11月6日</time></li>
+          <li><a href="/#picks">S02E07 瓦茨拉夫广场的反向竞拍</a><time datetime="2024-09-03">2024年9月3日</time></li>
+          <li><a href="/#picks">S03E13 日什科夫公园的不可撤回选择</a><time datetime="2026-10-26">10月26日</time></li>
+          <li><a href="/#picks">S01E03 天文钟下的问答付现</a><time datetime="2019-04-12">2019年4月12日</time></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>规则版本速查</h3>
+        <ul class="side-list">
+          <li>V1–V2：问答付现，无口头确认</li>
+          <li>V3–V4：口头确认 + 七日回访</li>
+          <li>V5：双机位、无剪辑预告</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site" id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="f-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1b4468"/>
+            <circle cx="32" cy="27" r="14" fill="none" stroke="#f0b429" stroke-width="3.5"/>
+            <path d="M25 27h14M32 20v14" stroke="#f0b429" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M17 47h30" stroke="#d6e2ee" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span>捷克街头钞能力全集</span>
+        </div>
+        <p>把街头临场测试按点位、规则版本和回访结果归档，方便对照同一结构在不同城市的表现。</p>
+        <p>网站内容为示例条目，分集编号、金额与回访数据按节目公开信息整理；未标注来源的判断仅代表档案整理意见。</p>
+      </div>
+      <div>
+        <h3>栏目</h3>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>指南与问答</h3>
+        <ul>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>延伸</h3>
+        <ul>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#more">相关推荐</a></li>
+          <li><a href="/#more">回访落实时间线</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>页脚更新时间 2026-11-08，对应正文可核对项：S03E14 分镜拆解、旧版片头对照、S03E13 回访结果。</span>
+      <span>© 2026 捷克街头钞能力全集 · 示例数据说明见上</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"捷克街头钞能力全集",
+  "about":"布拉格街头临场测试节目的分集档案与观看指南",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"查理大桥的硬币测试里，钱最后归谁？","acceptedAnswer":{"@type":"Answer","text":"桥栏上的 200 克朗由参与者自行处置，11 次选择里 8 人拿走，3 人先拿后放回街头艺人琴盒，节目组另外补了 200 克朗。"}},
+    {"@type":"Question","name":"反向竞拍为什么从 1000 克朗往下减？","acceptedAnswer":{"@type":"Answer","text":"递减结构让参与者主动喊停，S02E07 中第 6 位在 380 克朗喊停，前 5 位都在 500 以上放弃。"}},
+    {"@type":"Question","name":"不可撤回选择用信封，是否提前告知内容？","acceptedAnswer":{"@type":"Answer","text":"告知到金额或票券这一层，不告知具体数值；拆开前由主持人复述不可撤回，回访时 7/9 确认听过。"}},
+    {"@type":"Question","name":"佛罗伦萨站少找 40 克朗是否属实？","acceptedAnswer":{"@type":"Answer","text":"收据显示实付 2000 克朗、找零 1560 克朗，差价 40 克朗；店铺 10月20日回应称零钱不足，11月2日回访确认流程已调整。"}},
+    {"@type":"Question","name":"被搭话者可以要求不播吗？","acceptedAnswer":{"@type":"Answer","text":"可以，V5 条文允许事后申请模糊面部，处理时限为播出前 72 小时，2026年10月至今有 2 例按此处理。"}},
+    {"@type":"Question","name":"旧版问答付现的题目有固定题库吗？","acceptedAnswer":{"@type":"Answer","text":"没有完整题库；2019年可查 62 集中布拉格历史题出现 41 次，查理大学建校年份被问 7 次，通过率 5/7。"}}
+  ]
+}
+</script>
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainnav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=720){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  var input=document.getElementById('q');
+  var msg=document.getElementById('qmsg');
+  var targets=[].slice.call(document.querySelectorAll('main h2, main h3, main summary, main li, main p, footer .f-brand span'));
+  function clearMarks(){
+    [].slice.call(document.querySelectorAll('mark[data-s]')).forEach(function(m){
+      var t=document.createTextNode(m.textContent);
+      m.parentNode.replaceChild(t,m);
+    });
+  }
+  if(input&&msg){
+    input.addEventListener('input',function(){
+      var v=input.value.trim();
+      clearMarks();
+      if(!v){msg.classList.remove('show');msg.textContent='';return;}
+      msg.classList.add('show');
+      var hit=0,first=null;
+      targets.forEach(function(el){
+        if(el.textContent.indexOf(v)>-1){
+          hit++;
+          if(!first&&el.id) first=el.id;
+          if(!first){var s=el.closest('section[id]');if(s)first=s.id;}
+        }
+      });
+      if(hit===0){
+        msg.textContent='没有匹配“'+v+'”的分集或地点，试试“查理大桥”“反向竞拍”“回访”。';
+      }else{
+        msg.textContent='找到 '+hit+' 处匹配，按回车跳到首个相关区块。';
+      }
+      input.dataset.hit=hit;
+      input.dataset.first=first||'';
+    });
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){
+        var f=input.dataset.first;
+        if(f){location.hash=f;}
+        else if(input.value.trim()){
+          msg.classList.add('show');
+          msg.textContent='没有匹配“'+input.value.trim()+'”的结果，可试“查理大桥”“佛罗伦萨站”“不可撤回选择”。';
+        }
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var links=[].slice.call(document.querySelectorAll('#toc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/#','#'));});
+  function onScroll(){
+    var pos=window.scrollY+140,cur=0;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=pos)cur=i;});
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+  </html>
